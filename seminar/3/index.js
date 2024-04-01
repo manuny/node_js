@@ -8,10 +8,13 @@
 на соседнюю страницу.*/
 const express = require("express");
 const app = express();
-app.get("/", (req, res) => {
+app.use(express.static("static"));
+
+/*app.get("/", (req, res) => {
   res.send(`<h1>Welcome!</h1> <a href = "/adout">Link</a>`);
 });
 app.get("/about", (req, res) => {
   res.send(`<h1>Welcome about</h1> <a href = "/">Link</a>1`);
-});
+});*/
+
 app.listen("3000");
